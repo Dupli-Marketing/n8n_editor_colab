@@ -1,0 +1,1 @@
+# n8n_editor_colab
