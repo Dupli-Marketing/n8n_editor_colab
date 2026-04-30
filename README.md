@@ -24,8 +24,10 @@ Um **editor visual de workflows tipo n8n** construído do zero com Python, proje
 ```python
 !pip install dash plotly cytoscape networkx pydantic -q
 
-2. Criar um Workflow
+```
+### 2. Criar um Workflow
 
+```
 from n8n_editor_colab import (
     WorkflowDAGEngine, NodeData, EdgeData, NodeType,
     create_example_workflow
@@ -63,7 +65,9 @@ edge = EdgeData(
 )
 engine.add_edge(edge)
 
-3. Validar e Executar
+```
+### 3. Validar e Executar
+```
 
 from n8n_editor_colab import WorkflowExecutor, WorkflowVisualizer
 
@@ -79,5 +83,3 @@ fig.show()
 executor = WorkflowExecutor(engine)
 success, msg = executor.execute({"data": "input"})
 print(executor.get_log())
-
-
